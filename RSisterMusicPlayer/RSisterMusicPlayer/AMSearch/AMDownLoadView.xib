@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kpa-c2-NSW" customClass="AMDownloadView" customModule="RSisterMusicPlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OK-qF-O2u">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u37-PX-qgA">
+                            <rect key="frame" x="5" y="14" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="nAi-qR-fyY"/>
+                                <constraint firstAttribute="width" constant="16" id="ryA-dz-B3y"/>
+                            </constraints>
+                            <state key="normal" image="list_close_icon"/>
+                            <connections>
+                                <action selector="closeDownLoadView:" destination="kpa-c2-NSW" eventType="touchUpInside" id="EpQ-Nc-Fmz"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择下载品质" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB7-R4-61r">
+                            <rect key="frame" x="136" y="11" width="102" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="1aG-WL-QRr"/>
+                        <constraint firstItem="u37-PX-qgA" firstAttribute="centerY" secondItem="1OK-qF-O2u" secondAttribute="centerY" id="HGE-R2-cyO"/>
+                        <constraint firstItem="MB7-R4-61r" firstAttribute="centerY" secondItem="1OK-qF-O2u" secondAttribute="centerY" id="IQi-bg-sbm"/>
+                        <constraint firstItem="u37-PX-qgA" firstAttribute="leading" secondItem="1OK-qF-O2u" secondAttribute="leading" constant="5" id="j6S-jn-3Ma"/>
+                        <constraint firstAttribute="height" constant="44" id="lZH-zG-6C2"/>
+                        <constraint firstItem="MB7-R4-61r" firstAttribute="centerX" secondItem="1OK-qF-O2u" secondAttribute="centerX" id="oxN-IU-4YW"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L0m-Cs-9vT">
+                    <rect key="frame" x="0.0" y="44" width="375" height="156"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1OK-qF-O2u" secondAttribute="trailing" id="8pQ-Z0-O5O"/>
+                <constraint firstItem="L0m-Cs-9vT" firstAttribute="top" secondItem="1OK-qF-O2u" secondAttribute="bottom" id="CE3-6R-BW6"/>
+                <constraint firstItem="L0m-Cs-9vT" firstAttribute="leading" secondItem="kpa-c2-NSW" secondAttribute="leading" id="KSv-UU-NaI"/>
+                <constraint firstItem="1OK-qF-O2u" firstAttribute="top" secondItem="kpa-c2-NSW" secondAttribute="top" id="PO4-gW-F5c"/>
+                <constraint firstAttribute="trailing" secondItem="L0m-Cs-9vT" secondAttribute="trailing" id="Pgj-GJ-hwa"/>
+                <constraint firstItem="1OK-qF-O2u" firstAttribute="leading" secondItem="kpa-c2-NSW" secondAttribute="leading" id="S6P-9d-iU3"/>
+                <constraint firstItem="1OK-qF-O2u" firstAttribute="leading" secondItem="kpa-c2-NSW" secondAttribute="leading" id="TFc-nz-vB5"/>
+                <constraint firstItem="1OK-qF-O2u" firstAttribute="top" secondItem="kpa-c2-NSW" secondAttribute="top" id="dvz-kI-HdL"/>
+                <constraint firstAttribute="bottom" secondItem="L0m-Cs-9vT" secondAttribute="bottom" id="e4W-b8-GgI"/>
+                <constraint firstAttribute="trailing" secondItem="1OK-qF-O2u" secondAttribute="trailing" id="z0a-l8-wNu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="u37-PX-qgA" id="14G-65-baJ"/>
+                <outlet property="downOptionList" destination="L0m-Cs-9vT" id="A9E-WF-4tX"/>
+                <outlet property="titleLabel" destination="MB7-R4-61r" id="pPg-nM-hZl"/>
+            </connections>
+            <point key="canvasLocation" x="459.5" y="2"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="list_close_icon" width="16" height="16"/>
+    </resources>
+</document>
